@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CustomerInfo" representedClassName="CustomerInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="customerData" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserInfo" inverseName="customer" inverseEntity="UserInfo" syncable="YES"/>
+    </entity>
+    <entity name="UserInfo" representedClassName="UserInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="userData" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <relationship name="customer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CustomerInfo" inverseName="user" inverseEntity="CustomerInfo" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="UserInfo" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="CustomerInfo" positionX="-54" positionY="-9" width="128" height="75"/>
+    </elements>
 </model>
